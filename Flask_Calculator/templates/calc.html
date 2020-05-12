@@ -1,0 +1,32 @@
+{% extends 'layout.html'%}
+{% block content %}
+<div class = "content-section">
+
+		<div class="container">
+               <h3>Calculator App</h3>
+        </div>
+
+    <!-- Form -->
+        <div class="container">
+			<form action="/math" method="POST">
+            <label for="Number One">First Number</label>
+            <input type="text" placeholder="First Number" class="u-full-width"  name="num1"/>
+
+            <label for="Number Two">Second Number</label>
+            <input type="text" placeholder="Second Number"class="u-full-width" name="num2" />
+
+            <label for="Operation">Operation</label>
+              <select id="operation" name="operation">
+                 <option value="add">add</option>
+                 <option value="subtract">subtract</option>
+                 <option value="multiply">multiply</option>
+                 <option value="divide">divide</option>
+               </select>
+
+                              <input type="submit" value="Calculate">
+              <br />
+
+            </form>
+    </div>
+</div>
+{% endblock content %}
